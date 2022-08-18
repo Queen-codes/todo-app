@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*LIGHT THEME */
+  --veryLightGray: hsl(0, 0%, 98%);
+  --veryLightGrayishBlue: hsl(236, 33%, 92%);
+  --lightGrayishBlue: hsl(233, 11%, 84%);
+  --darkGrayishBlue: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+  /*Dark Mode */
+  --veryDarkBlue: hsl(235, 21%, 11%);
+  --veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --lightGrayishBlue: hsl(234, 39%, 85%);
+  --lightGrayishBluehover: hsl(236, 33%, 92%);
+  --darkGrayishBlue: hsl(234, 11%, 52%);
+  --veryyDarkGrayishBlue: hsl(233, 14%, 35%);
+  --veryDarkGrayishBlue: hsl(237, 14%, 26%);
+
+  --brightBlue: hsl(220, 98%, 61%);
+  --white: #fff;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+header {
+  background-image: url(../src/assets/bg-mobile-dark.jpg);
+  background-size: cover;
+  min-height: 280px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 2rem 0 2rem;
+  transition: background-image 0.4s ease-in-out;
+}
+
+.header-title {
+  color: #fff;
+  letter-spacing: 8px;
+  font-size: 1.7rem;
+}
+
+header.light {
+  background-image: url(../src/assets/bg-mobile-light.jpg);
+}
+
+form input {
+  border: none;
+  outline: none;
+  background-color: var(--veryDarkDesaturatedBlue);
+  padding: 1.3rem 2rem;
+  border-radius: 0.6rem;
+  width: 95%;
+  margin: auto;
+  position: absolute;
+  top: 15%;
+  left: 4%;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+form input:active,
+form input:focus-within {
+  color: azure;
+  border: 2px dotted azure;
+}
+
+form input.light {
+  background-color: var(--veryLightGray);
+  color: var(--VerydarkGrayishBlue);
+}
+
+main {
+  height: calc(100vh - 20px);
+  background-color: var(--veryDarkBlue);
+}
+
+main.light {
+  background-color: var(--veryLightGrayishBlue);
+}
+
+ul {
+  border-radius: 7px;
+  background-color: var(--veryDarkDesaturatedBlue);
+  width: 95%;
+  position: absolute;
+  top: 28%;
+  left: 3%;
+}
+
+ul.light {
+  background-color: var(--veryLightGray);
+}
+
+li {
+  color: var(--lightGrayishBlue);
+  list-style-type: none;
+  padding: 1.3rem;
+  border-bottom: 1px solid #393a4b;
+  display: flex;
+  align-items: center;
+}
+
+li.light {
+  color: var(--VerydarkGrayishBlue);
+}
+
+label.done {
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  border-radius: 100%;
+}
+
+li > button,
+.close-btn {
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.close-btn {
+  margin-left: auto;
+  border: none;
+}
+
+li > button {
+  margin-right: 0.8rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #393a4b;
+}
+
+li > button.true {
+  background: linear-gradient(#57ddff, #c058f3);
+  border: 2px dotted #fff;
+}
+
+.close-btn img {
+  opacity: 1;
+}
+
+li button img {
+  opacity: 0;
+}
+
+li button img.true {
+  opacity: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.bottom-sector {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.6rem;
+  height: 4rem;
+}
+.bottom-sector span,
+.bottom-sector > button {
+  color: hsl(235, 16%, 43%);
+}
+
+.bottom-sector button {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.bottom-sector > div {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.bottom-sector > div button:hover,
+.bottom-sector > div button:active {
+  color: var(--brightBlue);
+}
+.bottom-sector > div button {
+  color: hsl(235, 16%, 43%);
+  font-weight: 700;
+}
+
+.bottom-sector > div button.light {
+  color: hsl(235, 9%, 61%);
+}
+
+.mode-toggler {
+  cursor: pointer;
+}
+
+@media (min-width: 1025px) {
+  form input,
+  ul {
+    width: 40%;
+    left: 30%;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  form input,
+  ul {
+    width: 70%;
+    left: 20%;
+  }
+
+  ul {
+    top: 23%;
+  }
+}
+
+@media (max-width: 500px) {
+  .bottom-sector > div {
+    position: absolute;
+    top: 4.6rem;
+    height: 3rem;
+    padding: 0 3rem;
+    background-color: var(--veryDarkDesaturatedBlue);
+    width: 100%;
+    left: 0;
+    border-radius: 7px;
+    color: #fff;
+  }
+
+  .bottom-sector > div.light {
+    background-color: var(--veryLightGray);
+  }
+}
