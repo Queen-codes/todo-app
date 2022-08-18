@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repo](https://github.com/Queen-codes/todo-app)
-- Live Site URL: [Live Site]()
+- Live Site URL: [Live Site](https://todo-app-phi-two.vercel.app/)
 
 ## My process
 
